@@ -1,4 +1,2 @@
-def main():
-    print("Hello from publicpy!")
-
-main()
+print("Hello world!")
+print("Hello world!")
