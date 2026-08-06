@@ -1,6 +1,2 @@
-def main():
-    print("Hello from publicpy!")
-
-
-if __name__ == "__main__":
-    main()
+print("Hello world")
+print("Hello world")
