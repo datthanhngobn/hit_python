@@ -18,7 +18,7 @@ class Character :
         return 
 
     def show_info(self) :
-        print(f"Nhan vat {self.name} co {self.__hp} hp va co level {self._level}")
+        return f"Nhan vat {self.name} co {self.__hp} hp va co level {self._level}"
 
 class Warrior(Character) :
     def __init__(self, name, __hp, _level, strength):
@@ -59,12 +59,11 @@ for x in range(4) :
 countWarr, countMage = 0, 0
 
 for i in ls :
-    i.show_info()
+    print(i.show_info())
     if (isinstance(i, Warrior)) :
         countWarr += 1
     else :
         countMage += 1
-
 
 a = max(ls, key=lambda x : x.get_hp())
 

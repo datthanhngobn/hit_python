@@ -15,7 +15,7 @@ class Employee :
         return (self.__salary * 0.05)
 
     def show_info(self) :
-        print(f"Nhan vien {self.name} co luong la {self.__salary} thuoc bo phan {self._department}")
+        return f"Nhan vien {self.name} co luong la {self.__salary} thuoc bo phan {self._department}"
 
 class Developer(Employee) :
     def __init__(self, name, __salary, _department, programming_language, overtime_hours):
@@ -46,7 +46,7 @@ sum = 0
 countDev, countMana = 0, 0
 
 for i in ls :
-    i.show_info()
+    print(i.show_info())
     sum += i.calculate_bonus()
     if (isinstance(i, Developer)) :
         countDev += 1
@@ -54,7 +54,7 @@ for i in ls :
         countMana += 1
 
 a = max(ls, key=lambda x : x.get_salary())
-print(f"Nhan vien co luong cao nhat la {a}")
+print(f"Nhan vien co luong cao nhat la {a.show_info()}")
 
 print(f"Tong tien thuong cua tat ca nhan vien la {sum}")
 
